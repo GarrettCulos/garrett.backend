@@ -1,0 +1,38 @@
+import db from '../database/database';
+import sq from 'sequelize';
+import {
+	DatabaseModel, 
+	defaultTableOptions, 
+	defaultTableId 
+} from '../database/database.model';
+
+
+const tableName = 'tagXevent';
+
+const options = {
+	...defaultTableOptions,
+	tableName: tableName,
+	indexes: [
+		{
+			fields: ['tagId', 'eventId']
+		}
+	]
+};
+
+const columns = {
+	id: defaultTableId,
+	tagId: { 
+		type: sq.NUMBER,
+		allowNull: false
+	},
+	eventId: {
+		type: sq.NUMBER,
+		allowNull: false
+	}
+};
+
+export const tagXeventM = new DatabaseModel({ 
+	name: tableName,
+	columns: columns,
+	options: options
+}, db.sequelize);

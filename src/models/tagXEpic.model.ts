@@ -1,0 +1,37 @@
+import db from '../database/database';
+import sq from 'sequelize';
+import {
+	DatabaseModel, 
+	defaultTableOptions, 
+	defaultTableId 
+} from '../database/database.model';
+
+const tableName = 'tagXepic';
+
+const options = {
+	...defaultTableOptions,
+	tableName: tableName,
+	indexes: [
+		{
+			fields: ['tagId', 'epicId']
+		}
+	]
+};
+
+const columns = {
+	id: defaultTableId,
+	tagId: { 
+		type: sq.NUMBER,
+		allowNull: false
+	},
+	epicId: {
+		type: sq.NUMBER,
+		allowNull: false
+	}
+};
+
+export const tagXepicM = new DatabaseModel({ 
+	name: tableName,
+	columns: columns,
+	options: options
+}, db.sequelize);
