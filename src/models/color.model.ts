@@ -1,10 +1,6 @@
 import db from '../database/database';
 import sq from 'sequelize';
-import {
-	DatabaseModel, 
-	defaultTableOptions, 
-	defaultTableId 
-} from '../database/database.model';
+import { DatabaseModel, defaultTableOptions, defaultTableId } from '../database/database.model';
 
 export class ColorT {
 	id: number;
@@ -26,7 +22,7 @@ const options = {
 
 const columns = {
 	id: defaultTableId,
-	color: { 
+	color: {
 		type: sq.STRING,
 		allowNull: false
 	},
@@ -36,8 +32,11 @@ const columns = {
 	}
 };
 
-export const colorM = new DatabaseModel({ 
-	name: tableName,
-	columns: columns,
-	options: options
-}, db.sequelize);
+export const colorM = new DatabaseModel(
+	{
+		name: tableName,
+		columns: columns,
+		options: options
+	},
+	db.sequelize
+);

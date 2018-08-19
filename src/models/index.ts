@@ -19,7 +19,7 @@ export const model = {
 	tag: tag.tagM,
 	tagXepic: tagXepic.tagXepicM,
 	tagXevent: tagXevent.tagXeventM,
-	tagXperiod: tagXperiod.tagXperiodM,
+	tagXperiod: tagXperiod.tagXperiodM
 };
 
 export * from './color.model';

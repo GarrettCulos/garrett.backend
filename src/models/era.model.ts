@@ -17,18 +17,21 @@ const options = {
 
 const columns: sq.DefineAttributes = {
 	id: defaultTableId,
-	startTime: { 
-		type: sq.INTEGER, 
+	startTime: {
+		type: sq.INTEGER,
 		allowNull: false
 	},
-	endTime: { 
-		type: sq.INTEGER, 
+	endTime: {
+		type: sq.INTEGER,
 		allowNull: false
 	}
 };
 
-export const eraM = new DatabaseModel({ 
-	name: tableName,
-	columns: columns,
-	options: options
-}, db.sequelize);
+export const eraM = new DatabaseModel(
+	{
+		name: tableName,
+		columns: columns,
+		options: options
+	},
+	db.sequelize
+);

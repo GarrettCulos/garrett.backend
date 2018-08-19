@@ -1,5 +1,5 @@
 import express from 'express';
-import compression from 'compression';  // compresses requests
+import compression from 'compression'; // compresses requests
 import bodyParser from 'body-parser';
 import { logger } from './util/logger';
 import flash from 'express-flash';
@@ -20,7 +20,6 @@ const app = express();
 // Express configuration
 app.set('port', process.env.PORT || 3000);
 
-
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,15 +28,17 @@ app.use(flash());
 app.use(lusca.xframe('DENY'));
 app.use(lusca.xssProtection(true));
 
-app.options( `${basePath}/*`, middleware.validOptions);
+app.options(`${basePath}/*`, middleware.validOptions);
 
-app.use( middleware.addCORS );
+app.use(middleware.addCORS);
 
-// router.pricing.pricingRoutes(basePath, app);
-// router.sets.setsRoutes(basePath, app);
+router.epic(basePath, app);
+router.event(basePath, app);
+router.me(basePath, app);
+router.period(basePath, app);
 
 app.use((req, res) => {
-	res.status(400).send({message: 'Invalid api call'});
+	res.status(400).send({ message: 'Invalid api call' });
 });
 
 export default app;

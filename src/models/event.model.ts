@@ -1,8 +1,6 @@
 import db from '../database/database';
 import sq from 'sequelize';
-import { DatabaseModel, 
-	defaultTableOptions, 
-	defaultTableId } from '../database/database.model';
+import { DatabaseModel, defaultTableOptions, defaultTableId } from '../database/database.model';
 
 export class EventT {
 	id: number;
@@ -20,22 +18,25 @@ const options = {
 
 const columns: sq.DefineAttributes = {
 	id: defaultTableId,
-	title: { 
-		type: sq.STRING, 
+	title: {
+		type: sq.STRING,
 		allowNull: false
 	},
-	description: { 
-		type: sq.STRING, 
+	description: {
+		type: sq.STRING,
 		allowNull: false
 	},
-	time: { 
-		type: sq.STRING, 
+	time: {
+		type: sq.STRING,
 		allowNull: false
 	}
 };
 
-export const eventM = new DatabaseModel({ 
-	name: tableName,
-	columns: columns,
-	options: options
-}, db.sequelize);
+export const eventM = new DatabaseModel(
+	{
+		name: tableName,
+		columns: columns,
+		options: options
+	},
+	db.sequelize
+);

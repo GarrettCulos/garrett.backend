@@ -1,4 +1,3 @@
-
 import { validOptions } from './options';
 import { addCORS } from './cors';
 

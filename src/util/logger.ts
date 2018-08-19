@@ -36,7 +36,7 @@ export const logger = new Logger({
 	level: 'debug',
 	levels: myLevels.levels,
 	transports: [
-		new transports.Console({name: 'console'}),
+		new transports.Console({ name: 'console' }),
 		// new (winston.transports.File)({ name: 'error', filename: `${LOG_DIR}/error.log`, level: 'emerg' }),
 		// new (winston.transports.File)({ name: 'crit', filename: `${LOG_DIR}/crit.log`, level: 'crit' }),
 		// new (winston.transports.File)({ name: 'error', filename: `${LOG_DIR}/error.log`, level: 'error' }),
@@ -48,13 +48,10 @@ export const logger = new Logger({
 	]
 });
 
-
 export const db_logger = new Logger({
 	level: 'db',
 	levels: myLevels.levels,
-	transports: [
-		 new transports.File({ filename: `${__dirname}/../../log/database.log`, level: 'db' })
-	]
+	transports: [new transports.File({ filename: `${__dirname}/../../log/database.log`, level: 'db' })]
 });
 
 // winston.addColors(myLevels);

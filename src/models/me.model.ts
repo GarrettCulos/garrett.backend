@@ -1,8 +1,6 @@
 import db from '../database/database';
 import sq from 'sequelize';
-import { DatabaseModel, 
-	defaultTableOptions, 
-	defaultTableId } from '../database/database.model';
+import { DatabaseModel, defaultTableOptions, defaultTableId } from '../database/database.model';
 
 export class MeT {
 	id: number;
@@ -22,25 +20,28 @@ const options = {
 const columns: sq.DefineAttributes = {
 	id: defaultTableId,
 	firstName: {
-		type: sq.STRING,  
+		type: sq.STRING,
 		allowNull: true
 	},
-	lastName: { 
-		type: sq.STRING,  
+	lastName: {
+		type: sq.STRING,
 		allowNull: true
 	},
-	middleNames: { 
-		type: sq.STRING,  
+	middleNames: {
+		type: sq.STRING,
 		allowNull: true
 	},
-	phoneNumber: { 
-		type: sq.NUMBER,  
+	phoneNumber: {
+		type: sq.NUMBER,
 		allowNull: false
 	}
 };
 
-export const meM = new DatabaseModel({ 
-	name: tableName,
-	columns: columns,
-	options: options
-}, db.sequelize);
+export const meM = new DatabaseModel(
+	{
+		name: tableName,
+		columns: columns,
+		options: options
+	},
+	db.sequelize
+);

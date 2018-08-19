@@ -1,11 +1,8 @@
 import db from '../database/database';
 import sq from 'sequelize';
-import { DatabaseModel, 
-	defaultTableOptions, 
-	defaultTableId } from '../database/database.model';
+import { DatabaseModel, defaultTableOptions, defaultTableId } from '../database/database.model';
 
 export class PeriodT {
-
 	id: number;
 	title: string;
 	description: string;
@@ -22,20 +19,20 @@ const options = {
 
 const columns: sq.DefineAttributes = {
 	id: defaultTableId,
-  code: {
-		type: sq.STRING,  
+	code: {
+		type: sq.STRING,
 		allowNull: false
 	},
-  title: { 
-		type: sq.STRING,  
+	title: {
+		type: sq.STRING,
 		allowNull: false
 	},
-	description: { 
-		type: sq.STRING,  
+	description: {
+		type: sq.STRING,
 		allowNull: false
 	},
-	startTime: { 
-		type: sq.INTEGER, 
+	startTime: {
+		type: sq.INTEGER,
 		allowNull: false
 	},
 	endTime: {
@@ -44,8 +41,11 @@ const columns: sq.DefineAttributes = {
 	}
 };
 
-export const periodM = new DatabaseModel({ 
-	name: tableName,
-	columns: columns,
-	options: options
-}, db.sequelize);
+export const periodM = new DatabaseModel(
+	{
+		name: tableName,
+		columns: columns,
+		options: options
+	},
+	db.sequelize
+);

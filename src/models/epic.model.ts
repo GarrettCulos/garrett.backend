@@ -13,7 +13,7 @@ export class EpicT {
 
 const tableName = 'epic';
 
-const options = { 
+const options = {
 	...defaultTableOptions,
 	tableName: tableName,
 	indexes: [
@@ -25,31 +25,33 @@ const options = {
 
 const columns = {
 	id: defaultTableId,
-	title: { 
+	title: {
 		type: sq.STRING,
 		allowNull: false
 	},
-	colorId: { 
+	colorId: {
 		type: sq.INTEGER,
 		allowNull: false
 	},
-	description: { 
+	description: {
 		type: sq.STRING,
 		allowNull: false
 	},
-	startTime: { 
+	startTime: {
 		type: sq.INTEGER,
 		allowNull: false
 	},
-	endTime: { 
+	endTime: {
 		type: sq.INTEGER,
 		allowNull: true
 	}
-
 };
 
-export const epicM = new DatabaseModel({ 
-	name: tableName,
-	columns: columns,
-	options: options
-}, db.sequelize);
+export const epicM = new DatabaseModel(
+	{
+		name: tableName,
+		columns: columns,
+		options: options
+	},
+	db.sequelize
+);
