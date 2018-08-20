@@ -1,5 +1,5 @@
 import db from '../database/database';
-import sq from 'sequelize';
+import * as sq from 'sequelize';
 import { DatabaseModel, defaultTableOptions, defaultTableId } from '../database/database.model';
 
 export class ColorT {
