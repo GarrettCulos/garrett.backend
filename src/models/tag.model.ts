@@ -6,9 +6,10 @@ export class TagT {
 	id: number;
 	tag: string;
 	description: string;
+	color: string;
 }
 
-const tableName = 'event';
+const tableName = 'tag';
 
 const options = {
 	...defaultTableOptions,
@@ -22,6 +23,10 @@ const columns: sq.DefineAttributes = {
 		allowNull: false
 	},
 	description: {
+		type: sq.STRING,
+		allowNull: false
+	},
+	color: {
 		type: sq.STRING,
 		allowNull: false
 	}

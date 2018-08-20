@@ -9,7 +9,6 @@ export function initializeConnection() {
 			model.epic.q.sync().catch(db_logger.error);
 			model.event.q.sync().catch(db_logger.error);
 			model.me.q.sync().catch(db_logger.error);
-			model.color.q.sync().catch(db_logger.error);
 			model.era.q.sync().catch(db_logger.error);
 			model.period.q.sync().catch(db_logger.error);
 

@@ -1,4 +1,3 @@
-import * as color from './color.model';
 import * as epic from './epic.model';
 import * as tag from './tag.model';
 import * as era from './era.model';
@@ -10,7 +9,6 @@ import * as tagXevent from './tagXEvent.model';
 import * as tagXperiod from './tagXPeriod.model';
 
 export const model = {
-	color: color.colorM,
 	epic: epic.epicM,
 	era: era.eraM,
 	event: event.eventM,
@@ -22,7 +20,6 @@ export const model = {
 	tagXperiod: tagXperiod.tagXperiodM
 };
 
-export * from './color.model';
 export * from './epic.model';
 export * from './era.model';
 export * from './event.model';

@@ -1,7 +1,5 @@
-import dotenv from 'dotenv';
 import mysql from 'mysql';
 import Sequelize from 'sequelize';
-import { logger } from '../util/logger';
 import { config } from './config';
 
 class DatabaseConnection {
@@ -15,15 +13,17 @@ class DatabaseConnection {
 	}
 }
 
+const env = 'development';
+
 const pool = mysql.createPool({
-	connectionLimit: config.connection_limit,
-	host: config.options.host,
-	user: config.username,
-	password: config.password,
-	database: config.database
+	connectionLimit: config[env].connectionLimit,
+	host: config[env].options.host,
+	user: config[env].username,
+	password: config[env].password,
+	database: config[env].database
 });
 
-const sequelize = new Sequelize(config.database, config.username, config.password, config.options);
+const sequelize = new Sequelize(config[env].database, config[env].username, config[env].password, config[env].options);
 
 const db = new DatabaseConnection({
 	pool: pool,

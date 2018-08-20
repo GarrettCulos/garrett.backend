@@ -32,7 +32,7 @@ const columns: sq.DefineAttributes = {
 		allowNull: true
 	},
 	phoneNumber: {
-		type: sq.NUMBER,
+		type: sq.INTEGER,
 		allowNull: false
 	}
 };

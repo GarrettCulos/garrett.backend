@@ -17,11 +17,11 @@ const options = {
 const columns = {
 	id: defaultTableId,
 	tagId: {
-		type: sq.NUMBER,
+		type: sq.INTEGER,
 		allowNull: false
 	},
 	eventId: {
-		type: sq.NUMBER,
+		type: sq.INTEGER,
 		allowNull: false
 	}
 };

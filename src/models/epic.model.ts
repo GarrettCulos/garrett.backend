@@ -23,7 +23,7 @@ const options = {
 	]
 };
 
-const columns = {
+export const columns = {
 	id: defaultTableId,
 	title: {
 		type: sq.STRING,

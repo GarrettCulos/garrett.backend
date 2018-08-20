@@ -23,11 +23,11 @@ const options = {
 const columns = {
 	id: defaultTableId,
 	tagId: {
-		type: sq.NUMBER,
+		type: sq.INTEGER,
 		allowNull: false
 	},
 	periodId: {
-		type: sq.NUMBER,
+		type: sq.INTEGER,
 		allowNull: false
 	}
 };
