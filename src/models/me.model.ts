@@ -6,6 +6,7 @@ export class MeT {
 	id: number;
 	firstName: string;
 	lastName: string;
+	email: string;
 	middleNames: string;
 	phoneNumber: number;
 }
@@ -28,6 +29,10 @@ const columns: sq.DefineAttributes = {
 		allowNull: true
 	},
 	middleNames: {
+		type: sq.STRING,
+		allowNull: true
+	},
+	email: {
 		type: sq.STRING,
 		allowNull: true
 	},

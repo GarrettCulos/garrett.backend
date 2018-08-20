@@ -1,10 +1,24 @@
 import { Sequelize } from 'sequelize';
 
 module.exports = {
-	up: (queryInterface: any, seq: Sequelize) => {
-		//
+	up: (qi: any, seq: Sequelize) => {
+		return qi.bulkInsert(
+			'me',
+			[
+				{
+					firstname: 'garrett',
+					lastName: 'culos',
+					middleNames: 'James',
+					phoneNumber: 1234567890,
+					email: 'garrettculos@gmail.com',
+					createdAt: new Date(),
+					updatedAt: new Date()
+				}
+			],
+			{}
+		);
 	},
-	down: (queryInterface: any, seq: Sequelize) => {
-		//
+	down: (qi: any, seq: Sequelize) => {
+		return qi.bulkDelete('me', undefined, {});
 	}
 };
