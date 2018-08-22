@@ -1,1 +1,1 @@
-server 'pricing.mtgnorth.com', user: 'deploy', roles: %w{web app}, primary: true
+server 'garrett.culos', user: 'deploy', roles: %w{web app}, primary: true

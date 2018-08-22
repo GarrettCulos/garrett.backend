@@ -1,4 +1,5 @@
 import { Response } from 'express';
+import { logger } from './logger';
 
 class ErrorHandlerInput {
 	status: number;
@@ -8,11 +9,12 @@ class ErrorHandlerInput {
 }
 export function errorHandler(res: Response, { status, message, reason, source }: ErrorHandlerInput): Response {
 	const response: any = {};
-	response.status = status ? status : undefined;
+	response.status = status ? status : 500;
 	response.reason = reason ? reason : undefined;
 	response.message = message ? message : undefined;
 	response.source = source ? source : undefined;
-	return res.status(status).send(response);
+	logger.error(source, message);
+	return res.status(response.status).send(response);
 }
 
 class SuccessHandlerInput {

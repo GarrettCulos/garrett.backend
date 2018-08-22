@@ -1,7 +1,7 @@
 # the name of your website - should also be the name of the directory
 set :application, "garrett.backend"
 set :user, "mtgdeploy"
-set :source, "23.253.52.209"
+set :source, ""
 set :deploy_to, "/var/www/garrett.backend/#{fetch(:application)}"
 
 # linked files & dirs

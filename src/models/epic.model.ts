@@ -5,7 +5,6 @@ import { DatabaseModel, defaultTableOptions, defaultTableId } from '../database/
 export class EpicT {
 	id: number;
 	title: string;
-	colorId: number;
 	description: string;
 	startTime: number;
 	endTime: number;
@@ -29,20 +28,16 @@ export const columns = {
 		type: sq.STRING,
 		allowNull: false
 	},
-	colorId: {
-		type: sq.INTEGER,
-		allowNull: false
-	},
 	description: {
 		type: sq.STRING,
 		allowNull: false
 	},
 	startTime: {
-		type: sq.INTEGER,
+		type: sq.BIGINT,
 		allowNull: false
 	},
 	endTime: {
-		type: sq.INTEGER,
+		type: sq.BIGINT,
 		allowNull: true
 	}
 };

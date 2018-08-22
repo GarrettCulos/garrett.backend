@@ -19,10 +19,6 @@ const options = {
 
 const columns: sq.DefineAttributes = {
 	id: defaultTableId,
-	code: {
-		type: sq.STRING,
-		allowNull: false
-	},
 	title: {
 		type: sq.STRING,
 		allowNull: false
@@ -32,11 +28,11 @@ const columns: sq.DefineAttributes = {
 		allowNull: false
 	},
 	startTime: {
-		type: sq.INTEGER,
+		type: sq.BIGINT,
 		allowNull: false
 	},
 	endTime: {
-		type: sq.INTEGER,
+		type: sq.BIGINT,
 		allowNull: true
 	}
 };

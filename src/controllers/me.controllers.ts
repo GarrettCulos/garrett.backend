@@ -3,8 +3,13 @@ import { errorHandler, successHandler } from '../util/router';
 import { logger } from '../util/logger';
 import { services } from '../services';
 
-export let getMe = (req: Request, res: Response, next: NextFunction) => {
-	return successHandler(res, { data: {}, status: 200 });
+export let getMe = async (req: Request, res: Response, next: NextFunction) => {
+	try {
+		const me = await services.meService.getMe();
+		return successHandler(res, { data: me, status: 200 });
+	} catch (error) {
+		return errorHandler(res, { status: 500, message: error, source: 'getMe query' });
+	}
 };
 
 export let postMe = (req: Request, res: Response, next: NextFunction) => {
