@@ -1,7 +1,6 @@
 import express from 'express';
 import compression from 'compression'; // compresses requests
 import bodyParser from 'body-parser';
-import { logger } from './util/logger';
 import flash from 'express-flash';
 import lusca from 'lusca';
 import dotenv from 'dotenv';

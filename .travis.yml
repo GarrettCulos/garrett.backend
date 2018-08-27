@@ -1,12 +1,14 @@
+language: node_js
+node_js:
+    - 9.11
+services:
+    - mysql
+before_install:
+    - mysql -e 'CREATE DATABASE IF NOT EXISTS garrett;'
 
-{
-  "language": "node_js",
-  "node_js": "8",
-  "services": [
-    "mongodb"
-  ],
-  "script": [
-    "npm run build",
-    "npm run test"
-  ]
-}
+script":
+    - cp .env.example .env
+    - npm install
+    - npm run build
+    - npm run start
+    - npm run seed
