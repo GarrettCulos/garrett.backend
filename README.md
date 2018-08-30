@@ -12,7 +12,7 @@ To build and run this app locally you will need a few things:
 -   Clone the repository
 
 ```
-git clone --depth=1 https://github.com/garrettculos/mtg.north.tsnode <project_name>
+git clone --depth=1 https://github.com/GarrettCulos/garrett.backend<project_name>
 ```
 
 -   Install dependencies
@@ -21,8 +21,6 @@ git clone --depth=1 https://github.com/garrettculos/mtg.north.tsnode <project_na
 cd <project_name>
 npm install
 ```
-
-1
 
 -   Build and run the project
 
