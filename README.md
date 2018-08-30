@@ -64,43 +64,43 @@ The full folder structure of this app is explained below:
 
 > **Note!** Make sure you have already built the app using `npm run build`
 
-| Name                                 | Description                                                                                                        |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| **.vscode**                          | Contains VS Code specific settings                                                                                 |
-| **dist**                             | Contains the distributable (or output) from your TypeScript build. This is the code you ship                       |
-| **node_modules**                     | Contains all your npm dependencies                                                                                 |
-| **src**                              | Contains your source code that will be compiled to the dist dir                                                    |
-| **src/assets**                       | Static assets that will be used client side                                                                        |
-| **src/controllers**                  | Controllers define functions that respond to various http requests                                                 |
-| **src/database**                     |                                                                                                                    |
-| **src/database/**config.ts           | Sequelize database configuration                                                                                   |
-| **src/database/**database.model.ts   | Sequelize model methods                                                                                            |
-| **src/database/**database.sync.ts    | Sequelize database synchronization                                                                                 |
-| **src/database/**database.ts         | Sequelize database integration                                                                                     |
-| **src/database/**sequelize.config.ts | Sequelize database integration                                                                                     |
-| **src/middleware**                   | Middleware functions                                                                                               |
-| **src/models**                       | Database and ts models                                                                                             |
-| **src/router**                       | Router layer combines middleware and controller functions                                                          |
-| **src/seeders**                      | Seed scripts for adding basic data                                                                                 |
-| **src/services**                     | Reusable services called by controllers and other processes, this is where all database manipulations should occur |
-| **src/types**                        | Static assets that will be used client side                                                                        |
-| **src/util**                         | Utilities method and functions                                                                                     |
-| **src/types**                        | Holds .d.ts files not found on DefinitelyTyped. Covered more in this [section](#type-definition-dts-files)         |
-| **src**/server.ts                    | Entry point to your express app                                                                                    |
-| **src**/app.ts                       | Node js application file                                                                                           |
-| **test**                             | Contains your tests. Separate from source because there is a different build process.                              |
-| .env.example                         | API keys, tokens, passwords, database URI. Clone this, but don't check it in to public repos.                      |
-| .travis.yml                          | Used to configure Travis CI build                                                                                  |
-| .copyStaticAssets.ts                 | Build script that copies images, fonts, and JS libs to the dist folder                                             |
-| jest.config.js                       | Used to configure Jest                                                                                             |
-| package.json                         | File that contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped)         |
-| tsconfig.json                        | Config settings for compiling server code written in TypeScript                                                    |
-| tsconfig.tests.json                  | Config settings for compiling tests written in TypeScript                                                          |
-| tslint.json                          | Config settings for TSLint code style checking                                                                     |
-| pm2.default.json                     | Config for pm2 manager                                                                                             |
-| .sequelizerc                         | Config for sequelize ORM                                                                                           |
-| .prettierrc                          | Config for prettier automation                                                                                     |
-| .gitignore                           | git ignore file                                                                                                    |
+| Name                                  | Description                                                                                                        |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **.vscode**                           | Contains VS Code specific settings                                                                                 |
+| **dist**                              | Contains the distributable (or output) from your TypeScript build. This is the code you ship                       |
+| **node_modules**                      | Contains all your npm dependencies                                                                                 |
+| **src**                               | Contains your source code that will be compiled to the dist dir                                                    |
+| **src/assets**                        | Static assets that will be used client side                                                                        |
+| **src/controllers**                   | Controllers define functions that respond to various http requests                                                 |
+| **src/database**                      |                                                                                                                    |
+| **src/database/** config.ts           | Sequelize database configuration                                                                                   |
+| **src/database/** database.model.ts   | Sequelize model methods                                                                                            |
+| **src/database/** database.sync.ts    | Sequelize database synchronization                                                                                 |
+| **src/database/** database.ts         | Sequelize database integration                                                                                     |
+| **src/database/** sequelize.config.ts | Sequelize database integration                                                                                     |
+| **src/middleware**                    | Middleware functions                                                                                               |
+| **src/models**                        | Database and ts models                                                                                             |
+| **src/router**                        | Router layer combines middleware and controller functions                                                          |
+| **src/seeders**                       | Seed scripts for adding basic data                                                                                 |
+| **src/services**                      | Reusable services called by controllers and other processes, this is where all database manipulations should occur |
+| **src/types**                         | Static assets that will be used client side                                                                        |
+| **src/util**                          | Utilities method and functions                                                                                     |
+| **src/types**                         | Holds .d.ts files not found on DefinitelyTyped. Covered more in this [section](#type-definition-dts-files)         |
+| **src**/server.ts                     | Entry point to your express app                                                                                    |
+| **src**/app.ts                        | Node js application file                                                                                           |
+| **test**                              | Contains your tests. Separate from source because there is a different build process.                              |
+| .env.example                          | API keys, tokens, passwords, database URI. Clone this, but don't check it in to public repos.                      |
+| .travis.yml                           | Used to configure Travis CI build                                                                                  |
+| .copyStaticAssets.ts                  | Build script that copies images, fonts, and JS libs to the dist folder                                             |
+| jest.config.js                        | Used to configure Jest                                                                                             |
+| package.json                          | File that contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped)         |
+| tsconfig.json                         | Config settings for compiling server code written in TypeScript                                                    |
+| tsconfig.tests.json                   | Config settings for compiling tests written in TypeScript                                                          |
+| tslint.json                           | Config settings for TSLint code style checking                                                                     |
+| pm2.default.json                      | Config for pm2 manager                                                                                             |
+| .sequelizerc                          | Config for sequelize ORM                                                                                           |
+| .prettierrc                           | Config for prettier automation                                                                                     |
+| .gitignore                            | git ignore file                                                                                                    |
 
 ## Building the project
 
