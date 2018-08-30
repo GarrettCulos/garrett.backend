@@ -12,3 +12,10 @@ script":
     - npm run build
     - npm run start
     - npm run seed
+
+deploy:
+    provider: opsworks
+    access-key-id: AKIAILG7WEK23LQJUVYQ
+    secret-access-key: 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
+    app-id: 0c7790d5-7669-44dc-aeca-81118e191f56
+    region: us-west-2

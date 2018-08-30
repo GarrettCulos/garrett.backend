@@ -7,8 +7,7 @@ export function getEvent(eventId?: number) {
 	}
 	options.include = [
 		{
-			model: model.tag.q,
-			as: 'tags'
+			model: model.tag.q
 		}
 	];
 	return model.event.q.findAll(options);

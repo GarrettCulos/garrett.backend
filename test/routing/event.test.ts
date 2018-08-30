@@ -1,11 +1,16 @@
 import request from 'supertest';
+import { initializeConnection } from '../../src/database/database.sync';
 import app from '../../src/app';
 
 describe('ROUTING - event', () => {
 	it('should return 200 for getEvents', () => {
-		return request(app)
-			.get('/api/v1/event')
-			.expect(200);
+		initializeConnection()
+			.then(res => {
+				return request(app)
+					.get('/api/v1/event')
+					.expect(200);
+			})
+			.catch(err => console.log(err));
 	});
 
 	it('should return 400 for post /event ', () => {
