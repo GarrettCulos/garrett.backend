@@ -75,11 +75,11 @@ The full folder structure of this app is explained below:
 | **src/assets**                       | Static assets that will be used client side                                                                        |
 | **src/controllers**                  | Controllers define functions that respond to various http requests                                                 |
 | **src/database**                     |                                                                                                                    |
-| \*\*src/database/config.ts           | Sequelize database configuration                                                                                   |
-| \*\*src/database/database.model.ts   | Sequelize model methods                                                                                            |
-| \*\*src/database/database.sync.ts    | Sequelize database synchronization                                                                                 |
-| \*\*src/database/database.ts         | Sequelize database integration                                                                                     |
-| \*\*src/database/sequelize.config.ts | Sequelize database integration                                                                                     |
+| **src/database/**config.ts           | Sequelize database configuration                                                                                   |
+| **src/database/**database.model.ts   | Sequelize model methods                                                                                            |
+| **src/database/**database.sync.ts    | Sequelize database synchronization                                                                                 |
+| **src/database/**database.ts         | Sequelize database integration                                                                                     |
+| **src/database/**sequelize.config.ts | Sequelize database integration                                                                                     |
 | **src/middleware**                   | Middleware functions                                                                                               |
 | **src/models**                       | Database and ts models                                                                                             |
 | **src/router**                       | Router layer combines middleware and controller functions                                                          |
@@ -124,21 +124,22 @@ You'll notice that npm scripts can call each other which makes it easy to compos
 Below is a list of all the scripts this template has available:
 
 TODO: UPDATE LIST
-| Npm Script | Description |
+
+| Npm Script           | Description                                                                                 |
 | -------------------- | ------------------------------------------------------------------------------------------- |
-| `start` | Does the same as 'npm run serve'. Can be invoked with `npm start` |
-| `build` | Full build. Runs ALL build tasks (`build-sass`, `build-ts`, `tslint`, `copy-static-assets`) |
-| `serve` | Runs node on `dist/server.js` which is the apps entry point |
-| `watch-node` | Runs node with nodemon so the process restarts if it crashes. Used in the main watch task |
-| `watch` | Runs all watch tasks (TypeScript, Node). Use this if you're not touching static assets. |
-| `test` | Runs tests using Jest test runner |
-| `build-ts` | Compiles all source `.ts` files to `.js` files in the `dist` folder |
-| `watch-ts` | Same as `build-ts` but continuously watches `.ts` files and re-compiles when needed |
-| `tslint` | Runs TSLint on project files |
-| `copy-static-assets` | Calls script that copies JS libs, fonts, and images to dist directory |
-| `debug` | Performs a full build and then serves the app in watch mode |
-| `serve-debug` | Runs the app with the --inspect flag |
-| `watch-debug` | The same as `watch` but includes the --inspect flag so you can attach a debugger |
+| `start`              | Does the same as 'npm run serve'. Can be invoked with `npm start`                           |
+| `build`              | Full build. Runs ALL build tasks (`build-sass`, `build-ts`, `tslint`, `copy-static-assets`) |
+| `serve`              | Runs node on `dist/server.js` which is the apps entry point                                 |
+| `watch-node`         | Runs node with nodemon so the process restarts if it crashes. Used in the main watch task   |
+| `watch`              | Runs all watch tasks (TypeScript, Node). Use this if you're not touching static assets.     |
+| `test`               | Runs tests using Jest test runner                                                           |
+| `build-ts`           | Compiles all source `.ts` files to `.js` files in the `dist` folder                         |
+| `watch-ts`           | Same as `build-ts` but continuously watches `.ts` files and re-compiles when needed         |
+| `tslint`             | Runs TSLint on project files                                                                |
+| `copy-static-assets` | Calls script that copies JS libs, fonts, and images to dist directory                       |
+| `debug`              | Performs a full build and then serves the app in watch mode                                 |
+| `serve-debug`        | Runs the app with the --inspect flag                                                        |
+| `watch-debug`        | The same as `watch` but includes the --inspect flag so you can attach a debugger            |
 
 ## Debugging
 
@@ -275,8 +276,7 @@ If you are interesting in seeing TSLint feedback as soon as possible, I strongly
 
 To enhance your development experience while working in VSCode we also provide you a list of the suggested extensions for working with this project:
 
-![Suggested Extensions In VSCode](https://user-images.githubusercontent.com/14539/34583539-6f290a30-f198-11e7-8804-30f40d418e20.png)
-
+-   [Prettier](https://prettier.io/)
 -   [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
 -   [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 
@@ -288,41 +288,43 @@ In that file you'll find two sections:
 ## `dependencies`
 
 TODO Update
-| Package | Description |
+
+| Package           | Description                                                |
 | ----------------- | ---------------------------------------------------------- |
-| async | Utility library that provides asynchronous control flow. |
-| bcrypt-nodejs | Library for hashing and salting user passwords. |
-| bluebird | Promise library |
-| body-parser | Express 4 middleware. |
-| compression | Express 4 middleware. |
-| dotenv | Loads environment variables from .env file. |
-| errorhandler | Express 4 middleware. |
-| express | Node.js web framework. |
-| express-flash | Provides flash messages for Express. |
-| express-session | Express 4 middleware. |
-| express-validator | Easy form validation for Express. |
-| lodash | General utility library. |
-| lusca | CSRF middleware. |
-| nodemailer | Node.js library for sending emails. |
-| request | Simplified HTTP request library. |
-| request-promise | Promisified HTTP request library. Let's us use async/await |
-| winston | Logging library |
+| async             | Utility library that provides asynchronous control flow.   |
+| bcrypt-nodejs     | Library for hashing and salting user passwords.            |
+| bluebird          | Promise library                                            |
+| body-parser       | Express 4 middleware.                                      |
+| compression       | Express 4 middleware.                                      |
+| dotenv            | Loads environment variables from .env file.                |
+| errorhandler      | Express 4 middleware.                                      |
+| express           | Node.js web framework.                                     |
+| express-flash     | Provides flash messages for Express.                       |
+| express-session   | Express 4 middleware.                                      |
+| express-validator | Easy form validation for Express.                          |
+| lodash            | General utility library.                                   |
+| lusca             | CSRF middleware.                                           |
+| nodemailer        | Node.js library for sending emails.                        |
+| request           | Simplified HTTP request library.                           |
+| request-promise   | Promisified HTTP request library. Let's us use async/await |
+| winston           | Logging library                                            |
 
 ## `devDependencies`
 
 TODO Update
-| Package | Description |
+
+| Package      | Description                                                            |
 | ------------ | ---------------------------------------------------------------------- |
-| @types | Dependencies in this folder are `.d.ts` files used to provide types |
-| chai | Testing utility library that makes it easier to write tests |
-| concurrently | Utility that manages multiple concurrent tasks. Used with npm scripts |
-| jest | Testing library for JavaScript. |
-| nodemon | Utility that automatically restarts node process when it crashes |
-| supertest | HTTP assertion library. |
-| ts-jest | A preprocessor with sourcemap support to help use TypeScript wit Jest. |
-| ts-node | Enables directly running TS files. Used to run `copy-static-assets.ts` |
-| tslint | Linter (similar to ESLint) for TypeScript files |
-| typescript | JavaScript compiler/type checker that boosts JavaScript productivity |
+| @types       | Dependencies in this folder are `.d.ts` files used to provide types    |
+| chai         | Testing utility library that makes it easier to write tests            |
+| concurrently | Utility that manages multiple concurrent tasks. Used with npm scripts  |
+| jest         | Testing library for JavaScript.                                        |
+| nodemon      | Utility that automatically restarts node process when it crashes       |
+| supertest    | HTTP assertion library.                                                |
+| ts-jest      | A preprocessor with sourcemap support to help use TypeScript wit Jest. |
+| ts-node      | Enables directly running TS files. Used to run `copy-static-assets.ts` |
+| tslint       | Linter (similar to ESLint) for TypeScript files                        |
+| typescript   | JavaScript compiler/type checker that boosts JavaScript productivity   |
 
 To install or update these dependencies you can use `npm install` or `npm update`.
 
