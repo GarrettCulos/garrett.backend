@@ -6,13 +6,11 @@ services:
 before_install:
     - mysql -e 'CREATE DATABASE IF NOT EXISTS garrett;'
     - cp .env.example .env
-
 script:
     - npm install
     - npm run build
     - npm run start
     - npm run seed
-
 deploy:
     provider: opsworks
     access-key-id: AKIAILG7WEK23LQJUVYQ
